@@ -1,0 +1,14 @@
+
+
+Blue/Green Deployment
+
+1. Create Launch Template with version as a Description
+2. Create ASG and LB
+3. Update Launch Template with new version as a Description
+4. Update ASG with (latest) version
+
+Canary Deployment
+1. Create 2 Target Groups for CurrentVersion and NewVersion
+2. Create LB and associate CurrentVersion for specific instances
+3. Edit LB Listeners Section by creating new listener and attach NewVersion target Groups
+4. Provide percentage of deployments

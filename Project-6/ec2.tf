@@ -8,4 +8,8 @@ resource "aws_instance" "main" {
   tags = {
     Name = var.instance_name
   }
+
+  volume_tags = {
+    backup = "True"
+  }
 }
